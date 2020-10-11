@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+
+  zookeeper:
+    extends:
+      file: zookeeper/docker-compose.yml
+      service: zookeeper
+  hbase:
+    extends:
+      file: hbase/docker-compose.yml
+      service: hbase
+    links:
+      - zookeeper:zk
+
+  kafka:
+    extends:
+      file: kafka/docker-compose.yml
+      service: kafka
+    links:
+      - zookeeper:zk
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+
+  kafka-manager:
+    extends:
+      file: kafka/docker-compose.yml
+      service: kafka-manager
+    links:
+      - zookeeper:zk
+      - kafka:kafka
+
+  hadoop:
+    extends:
+      file: hadoop/docker-compose.yml
+      service: hadoop
+
+  pig:
+    extends:
+      file: hadoop/docker-compose.yml
+      service: pig
