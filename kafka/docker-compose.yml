@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   kafka:
-    image: anoopnair/kafka_alpine:0.9.0.1
+    image: wurstmeister/kafka:latest
     hostname: kafka
     ports:
       - "9092:9092"
@@ -14,7 +14,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   kafka-manager:
-    image: zenko/kafka-manager:latest
+    image: sheepkiller/kafka-manager:latest
     ports:
       - "9000:9000"
     environment:
