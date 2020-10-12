@@ -1,4 +1,4 @@
-# Twitter Streaming Analyze using Java 8, Kafka, Spark Streaming and Hive
+# Twitter Streaming Analyze using Java 8, Kafka, Spark Streaming and HBase
 A demo project for Big Data Technology using Spark Streaming to analyze popular hashtags from Twitter.
 Twitter feeds us data from the Twitter Streaming API and fed the to Kafka.
 Our Consumer receives data from Kafka and then processes it in a stream using 
