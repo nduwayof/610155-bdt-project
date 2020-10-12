@@ -31,12 +31,11 @@ public class KafkaConfig {
      */
     @Bean
     public Map<String, Object> producerConfigs() {
-        log.info("Kafka, configuring Kaffka Producer!");
+        log.info("***** Kafka, configuring Kaffka Producer!");
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, this.kafkaProperties.getBootstrapServers());
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-
         return props;
     }
 

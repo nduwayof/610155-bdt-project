@@ -2,7 +2,7 @@ spring:
   application:
     name: kafka-consumer-stream
   kafka:
-    bootstrap-servers: 192.168.99.100:9092
+    bootstrap-servers: 192.168.56.102:9092
     consumer:
       group-id: twitterworld
     template:

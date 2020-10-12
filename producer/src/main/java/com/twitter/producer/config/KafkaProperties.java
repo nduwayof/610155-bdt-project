@@ -1,5 +1,6 @@
 package com.twitter.producer.config;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
  * The type Kafka properties.
  * @author fabrice
  */
+@Data
 @Component
 @ConfigurationProperties(prefix = "spring.kafka", ignoreUnknownFields = false)
 public class KafkaProperties {
@@ -18,7 +20,8 @@ public class KafkaProperties {
     /**
      * The type Template.
      */
-    public final class Template{
+    @Data
+    public static class Template{
 
         private String defaultTopic;
 

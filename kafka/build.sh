@@ -1,3 +1,3 @@
 #!/bin/sh
-docker build -t anoopnair/kafka_alpine:0.9.0.1 .
+docker build -t wurstmeister/kafka:latest
 docker pull sheepkiller/kafka-manager
