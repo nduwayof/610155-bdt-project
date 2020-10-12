@@ -2,7 +2,7 @@
 A demo project for Big Data Technology using Spark Streaming to analyze popular hashtags from Twitter.
 Twitter feeds us data from the Twitter Streaming API and fed the to Kafka.
 Our Consumer receives data from Kafka and then processes it in a stream using 
-Spark Streaming and store the into Hive where I can run different Hive SQL queries.
+Spark Streaming and store the into HBase where I can run different HBase SQL queries.
 
 
 ## Requirements
@@ -37,7 +37,7 @@ Spark Streaming and store the into Hive where I can run different Hive SQL queri
 
 ##Quick Links
 
-- [Spark-Web-UI](http://localhost:3040/)
+- [Spark-Web-UI](http://localhost:4040/)
 - [HBase](http://localhost:60010/)
 - [Kafka-Manager](http://localhost:9000/)
 
