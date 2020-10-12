@@ -24,13 +24,20 @@ Spark Streaming and store the into Hive where I can run different Hive SQL queri
 ~> /bin/zsh  /Users/fabrice/Desktop/Final\ Project/start.sh
 ```
 
-3. Check all the containers which are running using the following command.
+5. Check all the containers which are running using the following command.
 
 ```
 ~> docker ps 
 ```
 
-4. Run producer and consumer app with:
+6. Run producer and consumer app with:
 ```
 ~> mvn spring-boot:run
 ```
+
+##Quick Links
+
+- [Spark-Web-UI](http://localhost:3040/)
+- [HBase](http://localhost:60010/)
+- [Kafka-Manager](http://localhost:9000/)
+
